@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "@seannyphoenix/butler",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -10,10 +10,12 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "start": "turbo run start --parallel",
+    "server": "npm run start -w server",
+    "web": "npm run start -w web"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
+    "eslint-config-google": "^0.14.0",
     "turbo": "latest"
   },
   "engines": {

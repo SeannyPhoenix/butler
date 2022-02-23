@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["next", "prettier"],
+  extends: ["next", "google"],
   settings: {
     next: {
       rootDir: ["apps/*/", "packages/*/"],
@@ -7,5 +7,6 @@ module.exports = {
   },
   rules: {
     "@next/next/no-html-link-for-pages": "off",
+    "require-jsdoc": "off"
   },
 };
