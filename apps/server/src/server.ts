@@ -1,12 +1,8 @@
-import express from 'express';
+import {dbConnect, startApi} from './modules/index.js';
 
-const app = express();
-const PORT = 3456;
+export async function server(): Promise<void> {
+  dbConnect();
+  startApi();
+} 
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hehe, fuckers!');
-});
-
-app.listen(PORT, () => {
-  console.log(`listening to fuckers on ${PORT}`);
-});
+server();
